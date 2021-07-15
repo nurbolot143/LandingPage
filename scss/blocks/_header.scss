@@ -1,0 +1,186 @@
+@import "../vars";
+
+.header {
+  padding: 33px 0 104px 0;
+  .nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-link {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: $accent-color;
+      transition: 0.5s;
+    }
+    border-bottom: 1px solid $accent-color;
+    padding-bottom: 32px;
+  }
+
+  &-mid {
+    padding: 40px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &-title {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: $dark;
+  }
+  &-about-me {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark;
+  }
+  .lg {
+    &-show {
+      display: none;
+    }
+    &-list {
+      list-style: none;
+      display: flex;
+      transform: rotate(-90deg);
+    }
+
+    &-link {
+      padding: 0 5px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $accent-color;
+      border: none;
+      background-color: $light;
+      transition: 0.5s;
+    }
+    &-link:hover {
+      color: $dark;
+    }
+    .item {
+      padding: 0;
+      margin: 0;
+    }
+    .item + .item {
+      border-left: 2px solid $dark;
+    }
+  }
+  .lg-link.active {
+    color: $dark;
+  }
+  &-photo {
+    width: 100%;
+    margin: 0 auto;
+    height: 450px;
+    background-image: url(../../images/header-image.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .nav-link.active {
+    color: $dark;
+  }
+
+  .menu-toggler {
+    display: none;
+    border: none;
+    background-color: $light;
+    cursor: pointer;
+  }
+
+  .close {
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    display: none;
+    border: none;
+    background-color: $light;
+    cursor: pointer;
+  }
+  .nav-link:hover {
+    color: $dark;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    &-mid {
+      align-items: center;
+    }
+    .menu {
+      display: none;
+      height: 80%;
+      &-fixed {
+        position: fixed;
+        top: 0;
+        padding-top: 50px;
+        background-color: #fff;
+        width: 100%;
+      }
+    }
+    .menu-show {
+      display: block;
+    }
+    .menu-toggler {
+      display: block;
+    }
+    .close {
+      display: block;
+    }
+    .lg {
+      display: none;
+      &-show {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 57px;
+        transform: rotate(180deg);
+      }
+    }
+    &-mid {
+      padding-top: 0;
+    }
+    .nav {
+      flex-direction: column;
+      border-bottom: none;
+
+      &-link {
+        line-height: 42px;
+      }
+    }
+    &-photo {
+      background-size: 100%;
+      max-height: 480px;
+      background-position: 50% 70%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    &-photo {
+      height: 350px;
+    }
+    .nav {
+      align-items: flex-start;
+    }
+    .about-me {
+      order: 1;
+      width: 200px;
+    }
+    &-mid {
+      flex-wrap: wrap;
+    }
+  }
+}

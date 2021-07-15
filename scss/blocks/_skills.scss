@@ -1,0 +1,45 @@
+@import "../vars";
+
+.skills {
+  padding: 70px 0 10px 0;
+  text-align: center;
+  &-title {
+    padding-bottom: 50px;
+  }
+  &-text {
+    padding-bottom: 80px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark;
+  }
+  &-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.skills-card {
+  padding: 0;
+  margin: 0 45px 80px 45px;
+  width: 166px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &-icon {
+    width: auto;
+    max-height: 88px;
+  }
+  &-title {
+    color: $accent-color;
+  }
+}
+
+@media (max-width: 527px) {
+  .skills-card {
+    margin: 0 20px 60px 20px;
+  }
+}

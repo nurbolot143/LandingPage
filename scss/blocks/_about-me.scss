@@ -1,0 +1,19 @@
+@import "../vars";
+
+.about {
+  padding: 100px 0 125px 0;
+  text-align: center;
+  background-color: #f6f6f6;
+  &-title {
+    padding-bottom: 10px;
+  }
+  &-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark;
+  }
+  &-text + &-text {
+    padding-top: 30px;
+  }
+}

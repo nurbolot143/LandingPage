@@ -1,0 +1,23 @@
+@import "vars";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 42px;
+  color: $dark;
+}

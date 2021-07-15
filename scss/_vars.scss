@@ -1,0 +1,29 @@
+$accent-color: #828282;
+$secondary-color: #e5e5e5;
+$dark: #070707;
+$light: #fff;
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"),
+    url("../font/Gilroy-Bold.eot") format("embedded-opentype"),
+    url("../font/Gilroy-Bold.ttf") format("woff2"),
+    url("../font/Gilroy-Bold.woff") format("woff"),
+    url("../font/Gilroy-Bold.woff2") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+    url("../font/Gilroy-Medium.eot") format("embedded-opentype"),
+    url("../font/Gilroy-Medium.ttf") format("woff2"),
+    url("../font/Gilroy-Medium.woff") format("woff"),
+    url("../font/Gilroy-Medium.woff2") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+$main-font: "Gilroy", "Arial", serif;
